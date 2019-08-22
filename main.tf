@@ -11,12 +11,11 @@ variable "subnet_address_prefixes" {
   type = "list"
 }
 
-credentials "aa-training.digitalinnovation.dev" {
+module "networking" {
+  credentials "aa-training.digitalinnovation.dev" {
   # valid user API token:
   token = "BOWz8wpmqWH4gA.atlasv1.dFNEqr1buLnp5C65jJd8z6jBQaRO5ggjzWheHKkpxmyukUm9APqL8GHOWf2zZ3HBByo"
 }
-
-module "networking" {
   source  = "aa-training.digitalinnovation.dev/spaudel/networking/azurerm"
   version = "0.0.2"
 
